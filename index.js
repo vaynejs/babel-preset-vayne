@@ -1,3 +1,4 @@
+const assign = require('object.assign')
 // 默认配置
 const defaultOptions = {
   targets: {
@@ -21,7 +22,7 @@ const defaultOptions = {
  * vayne babel 预解析
  */
 module.exports = function(context, options) {
-  let opts = {...defaultOptions, ...options || {}}
+  let opts = assign({}, defaultOptions, options || {})
 
   let plugins = [
     require('babel-plugin-transform-runtime'),
