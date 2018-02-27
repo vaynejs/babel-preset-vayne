@@ -53,6 +53,7 @@ module.exports = function(context, options) {
     presets: [
       [require('babel-preset-env'), {
         modules: false,
+        useBuiltIns: true,
         targets: opts.targets
       }],
       require('babel-preset-stage-2')
